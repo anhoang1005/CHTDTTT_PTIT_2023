@@ -1,0 +1,45 @@
+PART 1. Dữ liệu
+  1) Tập luật
+    R1: G01,C03,V04,S02,L02->P01
+    R2: G01,C02,V03,S07,L02->P01
+    R3: G01,C02,V03,S07,L01->P01
+    R4: G01,C05,V03,S01,L02->P01
+    R5: G01,C02,V04,S07,L01->P01
+    R6: G01,C05,V02,S01,L03->P01
+    R7: G01,C04,V01,S02,L01->P02
+    R8: G02,C04,V03,S05,L01->P02
+    R9: G01,C04,V01,S02->P02
+    R10: G02,C04,V01,S02,L01->P02
+    R11: G01,C04,V01,S03,L01->P03
+    R12: G01,C04,V01,S06,L01->P03
+    R13: G01,C06,V05,S03,L01->P03
+    R14: G02,C06,V05,S06,L01->P03
+    R15: G02,C06,V01,S04,L01->P03
+    R16: G01,C02,V02,S01,L01->P04
+    R17: G01,C02,V02,S01,L02->P04
+    R18: G01,C05,V02,S01,L01->P04
+    R19: G02,V04,S01,L01->P05
+    R20: G02,V04,S07,L01->P05
+    R21: G02,C06,V05,S03,L01->P06
+
+  2) Thuộc tính của người dùng 
+    C02, G01, L02, S07, V03.
+
+  3) Trang phục dự đoán
+    P01.
+
+PART 2. Suy diễn
+  1) Goal P01. Tìm thấy luật R1:G01,C03,V04,S02,L02->P01. Các goals mới cần chứng mình là G01, C03, V04, S02, L02.
+  2) -Goal G01. Cập nhật thuộc tính G01, bởi vì được tìm thấy trong tập thuộc tính gốc C02, G01, L02, S07, V03. Trả về thành công.
+  3) -Goal C03. Không có luật nào để suy diễn/không có thuộc tính này ban đầu. Trả về thất bại.
+  4) Goal P01. Tìm thấy luật R2:G01,C02,V03,S07,L02->P01. Các goals mới cần chứng mình là G01, C02, V03, S07, L02.
+  5) -Goal G01. Cập nhật thuộc tính G01, bởi vì được tìm thấy trong tập thuộc tính gốc C02, G01, L02, S07, V03. Trả về thành công.
+  6) -Goal C02. Cập nhật thuộc tính C02, bởi vì được tìm thấy trong tập thuộc tính gốc C02, G01, L02, S07, V03. Trả về thành công.
+  7) -Goal V03. Cập nhật thuộc tính V03, bởi vì được tìm thấy trong tập thuộc tính gốc C02, G01, L02, S07, V03. Trả về thành công.
+  8) -Goal S07. Cập nhật thuộc tính S07, bởi vì được tìm thấy trong tập thuộc tính gốc C02, G01, L02, S07, V03. Trả về thành công.
+  9) -Goal L02. Cập nhật thuộc tính L02, bởi vì được tìm thấy trong tập thuộc tính gốc C02, G01, L02, S07, V03. Trả về thành công.
+ 10) ==>Goal P01. Đã được chứng minh, Trả về thành công
+
+PART 3. Kết quả
+  1) Goal P01 được chứng minh.
+  2) Road: R2.
